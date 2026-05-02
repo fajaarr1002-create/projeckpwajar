@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jarzpwa - Progressive Web App</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="jarz">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text y='60%' font-size='40' text-anchor='middle' fill='white' font-weight='bold'>J</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text y='60%' font-size='40' text-anchor='middle' fill='white' font-weight='bold'>J</text></svg>">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">📱</div>
+                <h1 class="app-name">jarzpwa</h1>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-badge">Progressive Web App</div>
+                    <h2 class="hero-title">Aplikasi Web Modern & Cepat</h2>
+                    <p class="hero-url">https://jarzpwa.vercel.app</p>
+                    <div class="app-info">
+                        <p>jarzpwa adalah PWA sederhana yang menunjukkan kemampuan Progressive Web App modern dengan performa tinggi, offline support, dan pengalaman native.</p>
+                    </div>
+                    <div class="app-meta">
+                        <span class="version">v1.0.0</span>
+                        <span class="status">✅ Berfungsi Offline</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Install Button -->
+            <div class="install-prompt" id="installPrompt">
+                <button class="install-btn" id="installBtn">
+                    <span>📲</span>
+                    Install jarzpwa
+                </button>
+                <button class="close-install" id="closeInstall">&times;</button>
+            </div>
+
+            <!-- Features Section -->
+            <section class="features">
+                <h2 class="section-title">Fitur PWA</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏠</div>
+                        <h3>Installable</h3>
+                        <p>Tambahkan ke home screen seperti aplikasi native. Ikon muncul di desktop dan mobile.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Fast Loading</h3>
+                        <p>Service Worker meng-cache semua aset. Loading instan bahkan di jaringan lambat.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📴</div>
+                        <h3>Offline Support</h3>
+                        <p>Bekerja penuh offline. Konten tersedia kapan saja tanpa internet.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Modern UI</h3>
+                        <p>Desain responsif dengan dark/light mode. Animasi halus dan tema customizable.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Status Section -->
+            <section class="status-section">
+                <h3>Status PWA</h3>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <span class="status-label">Service Worker:</span>
+                        <span class="status-value" id="swStatus">Loading...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Online:</span>
+                        <span class="status-value" id="onlineStatus">Checking...</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 jarzpwa. Dibuat dengan ❤️ untuk demo PWA.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
